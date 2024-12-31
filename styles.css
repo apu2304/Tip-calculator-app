@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --light-blue: #C5E4E7ff;
+    --midnight-green: #00474Bff;
+    --keppel: #32C2ADff;
+    --kepl: #1f9684;
+    --alice-blue: #F3F8FBff;
+    --tiffany-blue: #9FE8DFff;
+    --white: #FFFFFFff;
+    --myrtle-green: #457376ff;
+    --old-rose: #B77E75ff;
+}
+body{
+    background-color: var(--tiffany-blue);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: "Space Mono", serif ;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--white);
+    gap: 20px;
+    max-width: 640px;
+    padding: 2em;
+    border-radius: 10px;
+}
+input{
+    font-family: "Space Mono";
+}
+.bill span{
+   display: block;
+}
+span{
+  font-size: 0.8em;
+  color: var(--midnight-green);
+}
+.bill input{
+    display: block;
+    width: 18em;
+    height: 1.8em;
+    padding-left: 1.8em;
+    margin-bottom: 20px;
+    border: 1px solid var(--midnight-green);
+}
+.bill{
+    position: relative;
+}
+.bill img{
+    position:absolute;
+    top: 25px;
+    left: 5px;
+}
+
+.tipbtn{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.tipbtn input{
+ background-color: var(--midnight-green);
+ outline: none;
+ border: none;
+ border-radius: 3px;
+ height: 2em;
+ width: 6em;
+ color: var(--alice-blue);
+ 
+}
+.tipbtn .active{
+    background-color: var(--keppel);
+    color: var(--midnight-green);
+}
+input::placeholder{
+  color: var(--midnight-green);
+  text-align: end;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.tipbtn input:last-child{
+    background-color: var(--white);
+    color: var(--midnight-green);
+    height: 1.6em;
+    width: 5.5em;
+    border: solid 2px var(--midnight-green);
+}
+.people{
+    position: relative;
+}
+.people input{
+    display: block;
+    width: 18em;
+    height: 1.8em;
+    padding-left: 1.8em;
+    border: 1px solid var(--midnight-green);
+}
+.people img{
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+}
+.total{
+    background-color: var(--midnight-green);
+    padding: 1em;
+    color: var(--white);
+    border-radius: 10px;
+}
+.total span{
+    color: var(--light-blue);
+}
+.total input{
+    width: 18em;
+    height: 2em;
+    padding-left: 1.8em;
+    border-radius: 4px;
+    outline: none;
+    border:none;
+    background-color: var(--kepl);
+}
+.total input:hover{
+    background-color: var(--keppel);
+}
+
+#tipAmount, #total{
+    display: inline;
+    color: var(--keppel);
+    font-size: 2em;
+    font-weight: 600;
+    padding-left: 35px;
+}
+@media screen and (max-width:460px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
